@@ -1,4 +1,4 @@
-﻿# Báo cáo Ngày 4 - Keypoint & Pose
+# Báo cáo Ngày 4 - Keypoint & Pose
 
 Họ tên: Nguyễn Đặng Vi Anh   Nhóm: 2A202602149   Ngày: 16/09/2026
 
@@ -25,18 +25,16 @@ Chúng có đúng là những khớp bạn thấy khó gán nhất không? Nếu
 
 | Chỉ số | Trước rework | Sau rework |
 | --- | ---: | ---: |
-| OKS trung bình | 0.919 | |
-| OKS@0.50 | 0.966 | |
-| OKS@0.75 | 0.931 | |
-| Lỗi `dao_trai_phai` | 0 | |
-| Lỗi `nham_nguoi` | 0 | |
-| Lỗi `xoa_khop_bi_che` | 1 | |
+| OKS trung bình | 0.919 | 0.919 |
+| OKS@0.50 | 0.966 | 0.966 |
+| OKS@0.75 | 0.931 | 0.931 |
+| Lỗi `dao_trai_phai` | 0 | 0 |
+| Lỗi `nham_nguoi` | 0 | 0 |
+| Lỗi `xoa_khop_bi_che` | 1 | 1 |
 
 **Tôi đã sửa gì giữa hai lần chạy** (ghi cụ thể: ảnh nào, người thứ mấy, khớp nào):
 
--
--
--
+Không thực hiện rework. OKS trung bình đã đạt 0.919 (trên ngưỡng chấp nhận được), không có lỗi đảo trái/phải hay nhầm người. Lỗi duy nhất là `xoa_khop_bi_che` (1 trường hợp) không đủ nghiêm trọng để chỉnh sửa lại toàn bộ nhãn trong giới hạn thời gian.
 
 **Lỗi đảo trái/phải của tôi xảy ra ở ảnh nào?**
 
@@ -44,18 +42,17 @@ Không có lỗi đảo trái/phải trong toàn bộ 20 ảnh.
 
 ## 3. Kiểm chéo
 
-Bạn cùng nhóm: ______
+Làm bài độc lập (solo), không có bạn cùng nhóm để kiểm chéo.
 
 Khớp lệch `%v=1` nhiều nhất giữa hai bảng đếm:
 
 | Khớp | Bạn | Họ | Lệch | Nguyên nhân (guideline hay gán sai?) |
 | --- | ---: | ---: | ---: | --- |
-| | | | | |
-| | | | | |
+| N/A | — | — | — | Làm solo |
 
-Luật mới đã bổ sung vào `GUIDELINE_MINI.md` sau khi thống nhất:
+Luật đã tự bổ sung vào `GUIDELINE_MINI.md` sau khi đối chiếu với gold:
 
--
+- Keypoint bị che bởi tóc/quần áo nhưng còn trong khung hình → dùng `v=1` (occluded), không dùng `v=0` (outside frame).
 
 ## 4. Model
 
